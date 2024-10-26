@@ -336,7 +336,7 @@
                   >
                 </p>
                 <ul>
-                  <li>Laravel , PHP</li>
+                  <li>PHP , SQL</li>
                   <li>React JS, jQuery</li>
                   <li>CSS, Bootstrap</li>
                   <li>Html, Javascript</li>
@@ -616,8 +616,10 @@
               <form
                 role="form"
                 class="email-form"
+                id="contact-form"
                 action="https://formspree.io/f/xpwaejrd"
                 method="post"
+                target="_blank"
               >
                 <div class="row">
                   <div class="form-group col-md-6">
@@ -665,7 +667,14 @@
                   ></textarea>
                 </div>
                 <div class="text-center">
-                  <button type="submit">Send Message</button>
+                  <button
+                    type="submit"
+                    onclick=" setTimeout(() => {
+                    clearInput()
+                  },1000);"
+                  >
+                    Send Message
+                  </button>
                 </div>
               </form>
             </div>
@@ -702,5 +711,10 @@
     <script src="assets/framework/slider/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/slick.js"></script>
+    <script>
+      function clearInput() {
+        document.getElementById("contact-form").reset();
+      }
+    </script>
   </body>
 </html>
